@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const UserModel = require("../models/User");
 const sha256 = require("js-sha256");
-const {createTokens,validateToken} = require('../handlers/JWT')
+const {createTokens} = require('../middlewares/JWT')
 
 
 exports.register = async (req, res) => {
@@ -47,6 +47,6 @@ exports.login = async (req, res) => {
 
   res.json({
     message:"User logged in successfully!",
-    token
+    accessToken
   })
 };

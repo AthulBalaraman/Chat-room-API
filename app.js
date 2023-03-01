@@ -25,6 +25,7 @@ db(()=>{
 
 //Bring in the routes
 app.use("/user",require('./routes/user'))
+app.use("/chatroom", require("./routes/chatroom"))
 
 
 // Setup Error handlers
